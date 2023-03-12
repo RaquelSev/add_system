@@ -3,11 +3,9 @@ import './TextField.css'
 const TextField = (props) => {
 
     const placeholderModif = `${props.placeholder}...`;
-    let typeValue = '';
 
-    const whenTyped = (event) => {
-      typeValue = event.target.value;
-      console.log(typeValue)
+    const typed = (event) => {
+      props.changed(event.target.value);
     }
     
     return (
@@ -16,8 +14,8 @@ const TextField = (props) => {
             {props.label}
           </label>
         <input
-          value={typeValue} 
-          onChange={whenTyped}
+          value={props.typed} 
+          onChange={typed}
           required={props.mandatory} 
           placeholder={placeholderModif}/>
       </div>

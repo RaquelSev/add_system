@@ -2,10 +2,11 @@ import './Form.css';
 import DropList from '../DropList';
 import TextField from '../TextField';
 import Button from '../Button';
+import { useState } from 'react';
 
 const Form = () => {
 
-    const times = [
+    const teams = [
         'Programação',
         'Front-end',
         'Data Science',
@@ -13,21 +14,49 @@ const Form = () => {
         'UX e Design',
         'Mobile',
         'Inovação e Gestão',
-    ] 
+    ]
+
+    const [name, setName] = useState('');
+    const [position, setPosition] = useState('');
+    const [image, setImage] = useState('');
+    const [team, setTeam] = useState('');
 
     const saving = (event) => {
         event.preventDefault();
-        console.log("Submited")
+        console.log("Submited =>", name, position, image, team)
     }
 
     return (
         <section className="form">
             <form onSubmit={saving}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <TextField mandatory={true} label="Nome" placeholder="Digite seu nome" />
-                <TextField mandatory={true} label="Cargo" placeholder="Digite seu cargo" />
-                <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
-                <DropList  mandatory={true} label="Time "itens={times}></DropList>
+                <TextField
+                    mandatory={true} 
+                    label="Name" 
+                    placeholder="Type your name"
+                    value={name}
+                    changed={typed => setName(typed)}
+                />
+                <TextField 
+                    mandatory={true} 
+                    label="Position" 
+                    placeholder="Type your position"
+                    value={position}
+                    changed={typed => setPosition(typed)}
+                />
+                <TextField 
+                    label="Imagem" 
+                    placeholder="Type the image address"
+                    value={image}
+                    changed={typed => setImage(typed)} 
+                    />
+                <DropList  
+                    mandatory={true} 
+                    label="Team"
+                    itens={teams} 
+                    value={team}
+                    changed={value => setTeam(value)}   
+                />
                 <Button>Create Card</Button>
             </form>
         </section>
