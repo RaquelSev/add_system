@@ -4,7 +4,7 @@ import TextField from '../TextField';
 import Button from '../Button';
 import { useState } from 'react';
 
-const Form = () => {
+const Form = (props) => {
 
     const teams = [
         'Programação',
@@ -23,7 +23,12 @@ const Form = () => {
 
     const saving = (event) => {
         event.preventDefault();
-        console.log("Submited =>", name, position, image, team)
+        props.addWorker({
+            name,
+            position,
+            image,
+            team
+        })
     }
 
     return (
