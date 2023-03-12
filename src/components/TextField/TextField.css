@@ -1,5 +1,5 @@
 .text-field {
-    margin: 24 px 0;
+    margin: 24px 0;
 }
 
 .text-field label {
@@ -9,7 +9,7 @@
 }
 
 .text-field input {
-    background-color: #ffff;
+    background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     width: 100%;
     border: none;

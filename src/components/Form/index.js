@@ -1,18 +1,17 @@
-import './Form.css';
-import TextField from '../TextField';
-
+import TextField from '../TextField'
+import './Form.css'
 
 const Form = () => {
     return (
-        <section className='form'>
+        <section className="form">
             <form>
-                <h2>Fill the persons data</h2>
-            <TextField label="Name" placeholder="Type your name"/>
-            <TextField label="Job" placeholder="Type your position"/>
-            <TextField label="Image" placeholder="Type the image address"/>
+                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <TextField label="Nome" placeholder="Digite seu nome" />
+                <TextField label="Cargo" placeholder="Digite seu cargo" />
+                <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
             </form>
         </section>
     )
 }
 
-export default Form;
+export default Form
