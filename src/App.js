@@ -2,6 +2,7 @@ import { useState } from "react";
 import Banner from "./components/Banner"
 import Form from "./components/Form";
 import Team from "./components/Team";
+import Worker from "./components/Worker";
 
 function App() {
 
@@ -52,10 +53,12 @@ function App() {
         teams={teams.map(team => team.name)} 
         addWorker={worker => newWorker(worker)}
       />
-      {teams.map(team => <Team key={team.name} 
+      {teams.map(team => <Team 
+        key={team.name} 
         name={team.name} 
         firstColor={team.firstColor} 
         secondColor={team.secondColor}
+        workers={workers.filter(worker => worker.team == team.name)}
         />)}
     </div>
   );
