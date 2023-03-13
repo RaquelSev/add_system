@@ -19,12 +19,16 @@ const Form = (props) => {
             image,
             team
         })
+        setName('')
+        setPosition('')
+        setImage('')
+        setTeam('')
     }
 
     return (
         <section className="form">
             <form onSubmit={saving}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <h2>Fill the data ao add the worker</h2>
                 <TextField
                     mandatory={true} 
                     label="Name" 
@@ -40,7 +44,7 @@ const Form = (props) => {
                     changed={typed => setPosition(typed)}
                 />
                 <TextField 
-                    label="Imagem" 
+                    label="Image" 
                     placeholder="Type the image address"
                     value={image}
                     changed={typed => setImage(typed)} 
@@ -58,4 +62,4 @@ const Form = (props) => {
     )
 }
 
-export default Form
+export default Form;

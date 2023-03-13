@@ -3,11 +3,7 @@ import Worker from '../Worker';
 
 const Team = (props) => {
     return (
-    
-        <section 
-            className='team'
-            style={{ backgroundColor: props.secondColor }}
-        >
+        (props.workers.length > 0) ? <section className='team'style={{ backgroundColor: props.secondColor }}>
             <h3 style={{ borderColor: props.firstColor }}>{props.name}</h3>
             <div className='workers'>
                 {props.workers.map(worker => <Worker 
@@ -16,8 +12,8 @@ const Team = (props) => {
                     image={worker.image}
                 />)}
             </div>
-            
         </section>
+        : ''
     )
 }
 

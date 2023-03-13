@@ -10,7 +10,6 @@ const Worker = ({ name, image, position }) => {
                 <h4>{name}</h4>
                 <h5>{position}</h5>
             </div>
-          
         </div>
     )
 }

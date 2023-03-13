@@ -2,7 +2,7 @@ import { useState } from "react";
 import Banner from "./components/Banner"
 import Form from "./components/Form";
 import Team from "./components/Team";
-import Worker from "./components/Worker";
+
 
 function App() {
 
@@ -41,8 +41,8 @@ function App() {
   ]
 
   const [workers, setWorkers] = useState([]);
+  
   const newWorker = (worker) => {
-    console.log(workers, worker)
     setWorkers([...workers, worker])
   }
 
@@ -58,7 +58,7 @@ function App() {
         name={team.name} 
         firstColor={team.firstColor} 
         secondColor={team.secondColor}
-        workers={workers.filter(worker => worker.team == team.name)}
+        workers={workers.filter(worker => worker.team === team.name)}
         />)}
     </div>
   );
