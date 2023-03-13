@@ -28,7 +28,7 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={saving}>
-                <h2>Fill the data ao add the worker</h2>
+                <h2>Fill the data to add the cards worker to our system</h2>
                 <TextField
                     mandatory={true} 
                     label="Name" 
