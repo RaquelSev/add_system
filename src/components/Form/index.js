@@ -28,33 +28,33 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={saving}>
-                <h2>Fill the data to add the cards worker to our system</h2>
+                <h2>Fill the data to add the cards worker to add in the system</h2>
                 <TextField
                     mandatory={true} 
                     label="Name" 
                     placeholder="Type your name"
-                    value={name}
+                    typed={name}
                     changed={typed => setName(typed)}
                 />
                 <TextField 
                     mandatory={true} 
                     label="Position" 
                     placeholder="Type your position"
-                    value={position}
+                    typed={position}
                     changed={typed => setPosition(typed)}
                 />
                 <TextField 
                     label="Image" 
                     placeholder="Type the image address"
-                    value={image}
+                    typed={image}
                     changed={typed => setImage(typed)} 
                     />
                 <DropList  
                     mandatory={true} 
                     label="Team"
                     itens={props.teams} 
-                    value={team}
-                    changed={value => setTeam(value)}   
+                    typed={team}
+                    changed={typed => setTeam(typed)}   
                 />
                 <Button>Create Card</Button>
             </form>

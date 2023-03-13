@@ -9,8 +9,9 @@ const DropList = (props) => {
             <select 
                 onChange={event => props.changed(event.target.value)}
                 required={props.mandatory} 
-                valeu={props.value}
+                typed={props.value}
             >
+                <option typed=""></option>
                 {props.itens.map(item => 
                     <option key={item}>{item}</option>)}
             </select>

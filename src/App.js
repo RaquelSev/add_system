@@ -8,14 +8,19 @@ function App() {
 
   const teams = [
     {
-      name: 'Front-End',
-      firstColor: '#82CFFA',
-      secondColor: '#E8F8FF',
+      name: 'Programação',
+      firstColor: '#57C278',
+      secondColor: '#D9F7E9'
     },
     {
-      name: 'Data Sciense',
+      name: 'Front-End',
+      firstColor: '#82CFFA',
+      secondColor: '#E8F8FF'
+    },
+    {
+      name: 'Data Science',
       firstColor: '#A6D157',
-      secondColor: '#F0F8E2',
+      secondColor: '#F0F8E2'
     },
     {
       name: 'Devops',
@@ -24,19 +29,19 @@ function App() {
     },
     {
       name: 'UX e Design',
-      firstColor: '#D86EBF',
-      secondColor: '#FAE5F5',
+      firstColor: '#DB6EBF',
+      secondColor: '#FAE9F5'
     },
     {
       name: 'Mobile',
-      firstColor: '#FEBA05',
-      secondColor: '#FFF5D9',
+      firstColor: '#FFBA05',
+      secondColor: '#FFF5D9'
     },
     {
       name: 'Inovação e Gestão',
       firstColor: '#FF8A29',
-      secondColor: '#FFEEDF',
-    },
+      corSecundaria: '#FFEEDF'
+    }
 
   ]
 
@@ -44,7 +49,10 @@ function App() {
   
   const newWorker = (worker) => {
     setWorkers([...workers, worker])
+    console.log(worker)
   }
+
+  console.log(workers)
 
   return (
     <div className="App">
