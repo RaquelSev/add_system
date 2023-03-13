@@ -11,7 +11,7 @@ const DropList = (props) => {
                 required={props.mandatory} 
                 typed={props.value}
             >
-                <option typed=""></option>
+                <option value=" "></option>
                 {props.itens.map(item => 
                     <option key={item}>{item}</option>)}
             </select>
