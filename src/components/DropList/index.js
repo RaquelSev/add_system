@@ -1,9 +1,6 @@
 import './DropList.css';
 
 const DropList = (props) => {
-
-
-
     return (
         <div className='drop-list'>
             <label>
